@@ -10,7 +10,7 @@ public class Cliente {
     private String estado;
     private String cep;
 
-    // Getters e Setters
+    
     public int getId() {
         return id;
     }
