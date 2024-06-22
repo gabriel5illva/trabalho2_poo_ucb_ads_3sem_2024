@@ -7,7 +7,7 @@ public class Produto {
     private double preco;
     private int quantidade;
 
-    // Getters e Setters
+    
     public int getId() {
         return id;
     }
