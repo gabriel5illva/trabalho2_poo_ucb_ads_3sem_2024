@@ -8,7 +8,7 @@ public class Pedido {
     private LocalDateTime dataPedido;
     private double total;
 
-    // Getters e Setters
+    
     public int getId() {
         return id;
     }
