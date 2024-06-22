@@ -75,7 +75,7 @@ public class ProdutoDAO {
             }
         }
 
-        return null; // Retorna null se o produto não for encontrado
+        return null; 
     }
 
     
