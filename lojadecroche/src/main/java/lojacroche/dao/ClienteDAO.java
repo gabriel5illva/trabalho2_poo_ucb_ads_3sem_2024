@@ -17,7 +17,7 @@ public class ClienteDAO {
         connection = MySQLConnector.getConnection();
     }
 
-    // Método para cadastrar um cliente
+    
     public void cadastrarCliente(Cliente cliente) throws SQLException {
         String query = "INSERT INTO cliente (nome, email, telefone, endereco, cidade, estado, cep) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
@@ -34,7 +34,7 @@ public class ClienteDAO {
         }
     }
 
-    // Método para consultar todos os clientes
+    
     public List<Cliente> consultarClientes() throws SQLException {
         List<Cliente> clientes = new ArrayList<>();
         String query = "SELECT * FROM cliente";
@@ -60,7 +60,7 @@ public class ClienteDAO {
         return clientes;
     }
 
-    // Método para consultar um cliente por ID
+    
     public Cliente consultarClientePorId(int id) throws SQLException {
         String query = "SELECT * FROM cliente WHERE id=?";
 
@@ -87,7 +87,7 @@ public class ClienteDAO {
         return null; // Retorna null se o cliente não for encontrado
     }
 
-    // Método para atualizar um cliente
+    
     public void atualizarCliente(Cliente cliente) throws SQLException {
         String query = "UPDATE cliente SET nome=?, email=?, telefone=?, endereco=?, cidade=?, estado=?, cep=? WHERE id=?";
 
@@ -105,7 +105,7 @@ public class ClienteDAO {
         }
     }
 
-    // Método para excluir um cliente
+    
     public void excluirCliente(int id) throws SQLException {
         String query = "DELETE FROM cliente WHERE id=?";
 
