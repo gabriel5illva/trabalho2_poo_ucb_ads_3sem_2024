@@ -14,7 +14,7 @@ public class Main {
         exibirMenu();
         System.out.print("Digite sua opção: ");
         int opcao = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do Scanner
+        scanner.nextLine(); 
 
         switch (opcao) {
             case 1:
@@ -163,7 +163,7 @@ public class Main {
         System.out.println("=== Exclusão de Cliente ===");
         System.out.print("Digite o ID do cliente a ser excluído: ");
         int id = scanner.nextInt();
-        scanner.nextLine(); // Limpar o buffer do Scanner
+        scanner.nextLine(); 
 
         try {
             Cliente cliente = clienteDAO.consultarClientePorId(id);
