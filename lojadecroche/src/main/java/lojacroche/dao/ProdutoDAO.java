@@ -17,7 +17,7 @@ public class ProdutoDAO {
         connection = MySQLConnector.getConnection();
     }
 
-    // Método para cadastrar um produto
+    
     public void cadastrarProduto(Produto produto) throws SQLException {
         String query = "INSERT INTO produto (nome, descricao, preco, quantidade) VALUES (?, ?, ?, ?)";
 
@@ -31,7 +31,7 @@ public class ProdutoDAO {
         }
     }
 
-    // Método para consultar todos os produtos
+    
     public List<Produto> consultarProdutos() throws SQLException {
         List<Produto> produtos = new ArrayList<>();
         String query = "SELECT * FROM produto";
@@ -54,7 +54,7 @@ public class ProdutoDAO {
         return produtos;
     }
 
-    // Método para consultar um produto por ID
+    
     public Produto consultarProdutoPorId(int id) throws SQLException {
         String query = "SELECT * FROM produto WHERE id=?";
 
@@ -78,7 +78,7 @@ public class ProdutoDAO {
         return null; // Retorna null se o produto não for encontrado
     }
 
-    // Método para atualizar um produto
+    
     public void atualizarProduto(Produto produto) throws SQLException {
         String query = "UPDATE produto SET nome=?, descricao=?, preco=?, quantidade=? WHERE id=?";
 
@@ -93,7 +93,7 @@ public class ProdutoDAO {
         }
     }
 
-    // Método para excluir um produto
+    
     public void excluirProduto(int id) throws SQLException {
         String query = "DELETE FROM produto WHERE id=?";
 
