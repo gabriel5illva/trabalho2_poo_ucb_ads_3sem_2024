@@ -18,7 +18,7 @@ public class PedidoDAO {
         connection = MySQLConnector.getConnection();
     }
 
-    // Método para cadastrar um pedido
+    
     public void cadastrarPedido(Pedido pedido) throws SQLException {
         String query = "INSERT INTO pedido (cliente_id, data_pedido, total) VALUES (?, ?, ?)";
 
@@ -31,7 +31,7 @@ public class PedidoDAO {
         }
     }
 
-    // Método para consultar todos os pedidos
+    
     public List<Pedido> consultarPedidos() throws SQLException {
         List<Pedido> pedidos = new ArrayList<>();
         String query = "SELECT * FROM pedido";
@@ -53,7 +53,7 @@ public class PedidoDAO {
         return pedidos;
     }
 
-    // Método para consultar um pedido por ID
+    
     public Pedido consultarPedidoPorId(int id) throws SQLException {
         String query = "SELECT * FROM pedido WHERE id=?";
 
@@ -76,7 +76,7 @@ public class PedidoDAO {
         return null; // Retorna null se o pedido não for encontrado
     }
 
-    // Método para atualizar um pedido
+    
     public void atualizarPedido(Pedido pedido) throws SQLException {
         String query = "UPDATE pedido SET cliente_id=?, data_pedido=?, total=? WHERE id=?";
 
@@ -90,7 +90,7 @@ public class PedidoDAO {
         }
     }
 
-    // Método para excluir um pedido
+    
     public void excluirPedido(int id) throws SQLException {
         String query = "DELETE FROM pedido WHERE id=?";
 
