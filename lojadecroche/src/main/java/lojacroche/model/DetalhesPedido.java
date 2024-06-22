@@ -7,7 +7,7 @@ public class DetalhesPedido {
     private int quantidade;
     private double preco;
 
-    // Getters e Setters
+    
     public int getId() {
         return id;
     }
